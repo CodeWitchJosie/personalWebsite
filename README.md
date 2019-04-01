@@ -1,4 +1,4 @@
-##Jocelyn's Personal Site
+## Jocelyn's Personal Site
 My personal website.  Using it to provide experience and code samples since most of my professional experience isn't publicly available.  Until that site is ready for production, have a silly website with my picture and puppy countdown.
 
 ## Features

@@ -1,41 +1,38 @@
 import * as React from 'react';
-import { graphql } from "gatsby";
-import {GatsbyImageProps, default as Img} from "gatsby-image"
-import Countdown from "../components/Countdown";
+import { graphql } from 'gatsby';
+import { GatsbyImageProps, default as Img } from 'gatsby-image';
+import Countdown from '../components/Countdown';
 import * as moment from 'moment';
 
 interface IndexPageProps {
   data: {
     fedoraImg: {
-      childImageSharp: GatsbyImageProps
-    }
-  }
+      childImageSharp: GatsbyImageProps;
+    };
+  };
 }
 
-export default class IndexPage
-  extends React.Component<IndexPageProps, {}> {
+export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
-      <div className={"container-fluid"}>
+      <div className={'container-fluid'}>
         <div className={`row justify-content-center`}>
-          <h1>
-            Poodle Puppy Countdown!!
-          </h1>
+          <h1>Poodle Puppy Countdown!!</h1>
         </div>
         <div className={`row justify-content-center`}>
           <div className={'text-center'}>
-            <Countdown targetDate={moment("03-31-2024", "MM-DD-YYYY")}/>
+            <Countdown targetDate={moment('03-31-2024', 'MM-DD-YYYY')} />
           </div>
         </div>
         <div className={`row justify-content-center`}>
           <div className={`col-4`}>
-            <Img fluid={this.props.data.fedoraImg.childImageSharp.fluid}/>
+            <Img fluid={this.props.data.fedoraImg.childImageSharp.fluid} />
           </div>
         </div>
-     </div>
-    )
+      </div>
+    );
   }
-};
+}
 
 export const query = graphql`
   query {
@@ -49,4 +46,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;
