@@ -18,7 +18,7 @@ export default class Countdown extends React.Component<Props, State> {
     };
   }
   interval: any;
-  componentWillMount() {
+  componentDidMount() {
     this.update();
 
     this.interval = setInterval(() => {
