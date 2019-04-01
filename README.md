@@ -1,16 +1,10 @@
-# Gatsby MobX starter
-
-Gatsby + MobX + TypeScript starter.
-
-Why? Because Gatsby is excellent [also for React apps (not just static sites)](https://www.gatsbyjs.org/blog/2018-10-15-beyond-static-intro/) and I wanted to have a quick alternative to `create-react-app --typescript` with a couple of things configured.
+##Jocelyn's Personal Site
+My personal website.  Using it to provide experience and code samples since most of my professional experience isn't publicly available.  Until that site is ready for production, have a silly website with my picture and puppy countdown.
 
 ## Features
 
 - Gatsby v2 + TypeScript
 - MobX with decorators
-- Two examples based on [@mweststrate's Egghead course](https://egghead.io/courses/manage-complex-state-in-react-apps-with-mobx):
-    - "Counter" as a basic store and an observer
-    - "Temperature" as a demo of `<Provider>` and type-safe `inject`
 - `.editorconfig` & Prettier
 - TSLint
 - Jest setup
