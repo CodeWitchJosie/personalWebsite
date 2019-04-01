@@ -37,7 +37,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-compression',
     'gatsby-plugin-offline'
   ]
 };
