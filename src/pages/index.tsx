@@ -3,11 +3,19 @@ import { graphql } from 'gatsby';
 import { GatsbyImageProps, default as Img } from 'gatsby-image';
 import Countdown from '../components/Countdown';
 import * as moment from 'moment';
+import { Helmet } from 'react-helmet';
 
 interface IndexPageProps {
   data: {
     fedoraImg: {
       childImageSharp: GatsbyImageProps;
+    };
+    site: {
+      siteMetadata: {
+        title: string;
+        description: string;
+        canonical: string;
+      };
     };
   };
 }
@@ -16,6 +24,12 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
       <div className={'container-fluid'}>
+        <Helmet>
+          <meta charSet='utf-8' />
+          <title>{this.props.data.site.siteMetadata.title}</title>
+          <link rel='canonical' href={this.props.data.site.siteMetadata.canonical} />
+          <meta name='description' content={this.props.data.site.siteMetadata.description} />
+        </Helmet>
         <div className={`row justify-content-center`}>
           <h1>Poodle Puppy Countdown!!</h1>
         </div>
@@ -43,6 +57,13 @@ export const query = graphql`
         fluid(maxWidth: 200) {
           ...GatsbyImageSharpFluid
         }
+      }
+    }
+    site: site {
+      siteMetadata {
+        title
+        description
+        canonical
       }
     }
   }

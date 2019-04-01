@@ -2,9 +2,9 @@ const path = require(`path`);
 
 module.exports = {
   siteMetadata: {
-    title: 'Code Witch :: Jocelyn Irwin',
-    name: "hello world",
-    tagline: "with typescript"
+    title: 'Code Witch',
+    description: "Josie is a professional Code Witch. She loves JavaScript, CSS, and discussing usability. Go Hokies!",
+    canonical: 'https://www.jocelynirwin.com'
   },
   plugins: [
     {
@@ -20,9 +20,24 @@ module.exports = {
         implementation: require("sass")
       }
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `jocelyn-irwin-code-witch`,
+        short_name: `josie`,
+        start_url: `/`,
+        background_color: `#663399`,
+        theme_color: `#663399`,
+        display: `standalone`,
+        icon: `src/images/icon.svg`, // This path is relative to the root of the site.
+      }
+    },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
+    'gatsby-plugin-react-helmet',
+    'gatsby-plugin-compression',
+    'gatsby-plugin-offline'
   ]
 };
