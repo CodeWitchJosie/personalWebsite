@@ -24,7 +24,7 @@ export default class IndexPage
         </div>
         <div className={`row justify-content-center`}>
           <div className={'text-center'}>
-            <Countdown targetDate={moment("March 31, 2024")}/>
+            <Countdown targetDate={moment("03-31-2024", "MM-DD-YYYY")}/>
           </div>
         </div>
         <div className={`row justify-content-center`}>
