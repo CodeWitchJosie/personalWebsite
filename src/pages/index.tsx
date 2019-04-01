@@ -24,7 +24,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
       <div className={'container-fluid'}>
-        <Helmet>
+        <Helmet htmlAttributes={{lang: 'en'}}>
           <meta charSet='utf-8' />
           <title>{this.props.data.site.siteMetadata.title}</title>
           <link rel='canonical' href={this.props.data.site.siteMetadata.canonical} />
