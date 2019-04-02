@@ -1,1 +1,94 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+body {
+  background-color: #f2f2f2;
+  font-family: "Lato";
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway";
+  font-weight: 300;
+  color: #333;
+}
+a {
+  color: #1abc9c;
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover, a:focus {
+  color: #7b7b7b;
+  text-decoration: none;
+  outline: 0;
+}
+
+a:before, a:after {
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+#header{
+    background: #111;
+    padding:0;
+  .navbar-nav {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #222;
+    /* For IE, the outcast */
+    zoom: 1;
+    a{
+      color: #fff;
+      display: block;
+      font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      text-decoration: none;
+      padding: 18px 20px 18px 20px;
+      border-left: 1px solid #222;
+      &:hover{
+        background: #222;
+        text-decoration: none;
+        border-left: 1px solid #111;
+      }
+      &:focus{
+        background: #111;
+        text-decoration: none;
+        border-left: 1px solid #111;
+      }
+      i {
+        font-size: 25px;
+      }
+    }
+    a.active{
+        background: #cc99ff;
+        border-left: 1px solid #111;
+        &:hover{
+          background: #cc99ff;
+        }
+    }
+    .hide-expanded{
+      display: none;
+    }
+  }
+}

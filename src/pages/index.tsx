@@ -1,9 +1,8 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImageProps, default as Img } from 'gatsby-image';
-import Countdown from '../components/Countdown';
-import * as moment from 'moment';
 import { Helmet } from 'react-helmet';
+import Header from '../components/Header'
 
 interface IndexPageProps {
   data: {
@@ -15,6 +14,7 @@ interface IndexPageProps {
         title: string;
         description: string;
         canonical: string;
+        keywords: string
       };
     };
   };
@@ -23,25 +23,17 @@ interface IndexPageProps {
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
-      <div className={'container-fluid'}>
+      <div>
         <Helmet htmlAttributes={{lang: 'en'}}>
           <meta charSet='utf-8' />
           <title>{this.props.data.site.siteMetadata.title}</title>
           <link rel='canonical' href={this.props.data.site.siteMetadata.canonical} />
           <meta name='description' content={this.props.data.site.siteMetadata.description} />
+          <meta name='keywords' content={this.props.data.site.siteMetadata.keywords} />
         </Helmet>
-        <div className={`row justify-content-center`}>
-          <h1>Poodle Puppy Countdown!!</h1>
-        </div>
-        <div className={`row justify-content-center`}>
-          <div className={'text-center'}>
-            <Countdown targetDate={moment('03-31-2024', 'MM-DD-YYYY')} />
-          </div>
-        </div>
-        <div className={`row justify-content-center`}>
-          <div className={`col-4`}>
-            <Img fluid={this.props.data.fedoraImg.childImageSharp.fluid} />
-          </div>
+        <Header />
+        <div style={{backgroundColor: 'pink'}}>
+          content
         </div>
       </div>
     );
@@ -64,6 +56,7 @@ export const query = graphql`
         title
         description
         canonical
+        keywords
       }
     }
   }

@@ -4,7 +4,8 @@ module.exports = {
   siteMetadata: {
     title: 'Code Witch',
     description: "Josie is a professional Code Witch. She loves JavaScript, CSS, and discussing usability. Go Hokies!",
-    canonical: 'https://www.jocelynirwin.com'
+    canonical: 'https://www.jocelynirwin.com',
+    keywords: 'Developer,React,JavaScript,Female Engineer,Tech Lead, Manager'
   },
   plugins: [
     {
@@ -31,6 +32,21 @@ module.exports = {
         display: `standalone`,
         icon: `src/images/icon.svg`, // This path is relative to the root of the site.
       }
+    },
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          {
+            family: `Raleway`,
+            variants: [`300`, `400`, `700`],
+          },
+          {
+            family: `Lato`,
+            variants: [`300`, `400`, `700`, `300italic`, `400italic`]
+          },
+        ],
+      },
     },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
