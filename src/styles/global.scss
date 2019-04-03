@@ -1,9 +1,12 @@
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.css';
+@import './colors.scss';
+
+//TODO: break sections out into css modules
 
 body {
   background-color: #f2f2f2;
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 300;
   font-size: 16px;
   color: #555;
@@ -11,8 +14,13 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway';
   font-weight: 300;
   color: #333;
 }
@@ -26,13 +34,15 @@ a {
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   color: #7b7b7b;
   text-decoration: none;
   outline: 0;
 }
 
-a:before, a:after {
+a:before,
+a:after {
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
   -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
   -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -49,9 +59,13 @@ hr {
   padding: 0;
 }
 
-#header{
-    background: #111;
-    padding:0;
+/*
+Header
+ */
+
+#header {
+  background: $header-background;
+  padding: 0;
   .navbar-nav {
     position: relative;
     margin: 0;
@@ -59,19 +73,19 @@ hr {
     border-right: 1px solid #222;
     /* For IE, the outcast */
     zoom: 1;
-    a{
+    a {
       color: #fff;
       display: block;
-      font: normal 11px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font: normal 11px/18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
       text-decoration: none;
       padding: 18px 20px 18px 20px;
       border-left: 1px solid #222;
-      &:hover{
+      &:hover {
         background: #222;
         text-decoration: none;
         border-left: 1px solid #111;
       }
-      &:focus{
+      &:focus {
         background: #111;
         text-decoration: none;
         border-left: 1px solid #111;
@@ -80,15 +94,42 @@ hr {
         font-size: 25px;
       }
     }
-    a.active{
-        background: #cc99ff;
-        border-left: 1px solid #111;
-        &:hover{
-          background: #cc99ff;
-        }
+    a.active {
+      background: $header-active-color;
+      border-left: 1px solid #111;
+      &:hover {
+        background: $header-active-color;
+      }
     }
-    .hide-expanded{
-      display: none;
-    }
+  }
+}
+/*
+
+Cover
+
+ */
+.gatsby-background-image-cover {
+  margin-top: 60px;
+  padding-top: 140px;
+  text-align: center;
+  min-height: 500px;
+  width: 100%;
+  //background-position: center center;
+  //-webkit-background-size: 100%;
+  //-moz-background-size: 100%;
+  //-o-background-size: 100%;
+  //background-size: 100%;
+  //-webkit-background-size: cover;
+  //-moz-background-size: cover;
+  //-o-background-size: cover;
+  //background-size: cover;
+  h1 {
+    font-weight: 400;
+    font-size: 5em;
+    color: white;
+  }
+  h3 {
+    font-size: 2em;
+    color: white;
   }
 }

@@ -2,7 +2,8 @@ import * as React from 'react';
 import { graphql } from 'gatsby';
 import { GatsbyImageProps, default as Img } from 'gatsby-image';
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header'
+import Header from '../components/Header';
+import Cover from '../components/Cover';
 
 interface IndexPageProps {
   data: {
@@ -14,7 +15,7 @@ interface IndexPageProps {
         title: string;
         description: string;
         canonical: string;
-        keywords: string
+        keywords: string;
       };
     };
   };
@@ -24,7 +25,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
       <div>
-        <Helmet htmlAttributes={{lang: 'en'}}>
+        <Helmet htmlAttributes={{ lang: 'en' }}>
           <meta charSet='utf-8' />
           <title>{this.props.data.site.siteMetadata.title}</title>
           <link rel='canonical' href={this.props.data.site.siteMetadata.canonical} />
@@ -32,9 +33,7 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           <meta name='keywords' content={this.props.data.site.siteMetadata.keywords} />
         </Helmet>
         <Header />
-        <div style={{backgroundColor: 'pink'}}>
-          content
-        </div>
+        <Cover />
       </div>
     );
   }

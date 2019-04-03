@@ -53,6 +53,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-offline'
+    'gatsby-plugin-offline',
+    `gatsby-background-image`
   ]
 };
