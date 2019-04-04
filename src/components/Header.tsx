@@ -3,36 +3,52 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 
+interface Tab {
+  icon: string;
+  label: string;
+  slug: string;
+}
+
 const Header = () => {
-  const labels = {
-    about: 'About',
-    community: 'Community',
-    contact: 'Contact',
-    experience: 'Experience',
-  };
+  // TODO: move to /data and make a query
+
+  const tabs: Tab[] = [
+    {
+      icon: 'user',
+      label: 'About',
+      slug: 'about',
+    },
+    {
+      icon: 'briefcase',
+      label: 'Work',
+      slug: 'work',
+    },
+    {
+      icon: 'users',
+      label: 'Local',
+      slug: 'community',
+    },
+    {
+      icon: 'envelope',
+      label: 'Contact',
+      slug: 'contact',
+    },
+  ];
   const breakpoint = true;
   return (
-    <Navbar id={'header'} collapseOnSelect={true} fixed={'top'} expand={breakpoint} variant='dark'>
+    <Navbar id={'header'} collapseOnSelect={true} fixed={'top'} expand={breakpoint} bg='slate' variant='dark'>
       <Container>
         <Navbar.Toggle aria-controls='responsive-navbar-nav' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mx-auto text-center'>
-            <Nav.Link href='#about' title={labels.about}>
-              <i className='fas fa-user' />
-              <div className='hide-expanded'>{labels.about}</div>
-            </Nav.Link>
-            <Nav.Link href='#experience' title={labels.experience}>
-              <i className='fas fa-briefcase' />
-              <div className='hide-expanded'>{labels.experience}</div>
-            </Nav.Link>
-            <Nav.Link href='#community' title={labels.community}>
-              <i className='fas fa-users' />
-              <div className='hide-expanded'>{labels.community}</div>
-            </Nav.Link>
-            <Nav.Link href='#contact' title={labels.contact}>
-              <i className='fas fa-envelope' />
-              <div className='hide-expanded'>{labels.contact}</div>
-            </Nav.Link>
+            {tabs.map((tab: Tab, index: number) => {
+              return (
+                <Nav.Link key={tab.slug} href={`#${tab.slug}`} title={tab.label}>
+                  <i className={`fas fa-${tab.icon}`} />
+                  <div className='hide-expanded'>{tab.label}</div>
+                </Nav.Link>
+              );
+            })}
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -19,7 +19,7 @@ const Cover = () => (
         }
       }
     `}
-    render={data => {
+    render={(data: any) => {
       // Set ImageData.
       const imageData = data.coverImg.childImageSharp.fluid;
       return (
@@ -27,9 +27,9 @@ const Cover = () => (
           <BackgroundImage classId='cover' Tag='section' fluid={imageData} backgroundColor={`#111111`}>
             <Container>
               <Row className='text-center'>
-                <div className='col-lg-12'>
+                <div className='col-12'>
                   <h1>Jocelyn Irwin</h1>
-                  <h3>JavaScript Architect | CodeWitch@JocelynIrwin.com</h3>
+                  <h3>Code Witch</h3>
                 </div>
               </Row>
             </Container>

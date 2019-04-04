@@ -45,6 +45,10 @@ module.exports = {
             family: `Lato`,
             variants: [`300`, `400`, `700`, `300italic`, `400italic`]
           },
+          {
+            family: `Allura`,
+            variants: [`400`]
+          },
         ],
       },
     },

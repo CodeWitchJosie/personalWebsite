@@ -24,30 +24,23 @@ h6 {
   font-weight: 300;
   color: #333;
 }
+h5 {
+  font-size: 0.9em;
+}
 a {
-  color: #1abc9c;
+  color: theme-color('light-purple');
   word-wrap: break-word;
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
   -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
   -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
   -o-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in;
-}
-
-a:hover,
-a:focus {
-  color: #7b7b7b;
-  text-decoration: none;
-  outline: 0;
-}
-
-a:before,
-a:after {
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-  transition: color 0.1s ease-in, background 0.1s ease-in;
+  &:hover,
+  &:focus {
+    color: theme-color('bright-purple');
+    text-decoration: none;
+    outline: 0;
+  }
 }
 
 hr {
@@ -64,7 +57,7 @@ Header
  */
 
 #header {
-  background: $header-background;
+  background: theme-color('slate');
   padding: 0;
   .navbar-nav {
     position: relative;
@@ -74,9 +67,8 @@ Header
     /* For IE, the outcast */
     zoom: 1;
     a {
-      color: #fff;
+      color: color-yiq(theme-color('slate'));
       display: block;
-      font: normal 11px/18px 'Helvetica Neue', Helvetica, Arial, sans-serif;
       text-decoration: none;
       padding: 18px 20px 18px 20px;
       border-left: 1px solid #222;
@@ -95,10 +87,10 @@ Header
       }
     }
     a.active {
-      background: $header-active-color;
+      background: theme-color('bright-purple');
       border-left: 1px solid #111;
       &:hover {
-        background: $header-active-color;
+        background: theme-color('bright-purple');
       }
     }
   }
@@ -108,28 +100,112 @@ Header
 Cover
 
  */
-.gatsby-background-image-cover {
+#cover {
   margin-top: 60px;
-  padding-top: 140px;
-  text-align: center;
-  min-height: 500px;
-  width: 100%;
-  //background-position: center center;
-  //-webkit-background-size: 100%;
-  //-moz-background-size: 100%;
-  //-o-background-size: 100%;
-  //background-size: 100%;
-  //-webkit-background-size: cover;
-  //-moz-background-size: cover;
-  //-o-background-size: cover;
-  //background-size: cover;
-  h1 {
-    font-weight: 400;
-    font-size: 5em;
-    color: white;
+  .gatsby-background-image-cover {
+    padding-top: 140px;
+    min-height: 500px;
+    width: 100%;
+    word-wrap: break-word;
+    h1 {
+      font-family: 'Allura';
+      font-size: 6em;
+      color: white;
+    }
+    h3 {
+      color: white;
+      font-size: 1.5em;
+    }
   }
-  h3 {
-    font-size: 2em;
-    color: white;
+}
+/*
+
+About
+
+ */
+#about {
+  background-color: theme-color('charcoal');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h5,
+  p {
+    color: color-yiq(theme-color('charcoal'));
+  }
+  .download{
+    font-size: .9em;
+  }
+}
+
+/*
+
+Work
+
+ */
+#work {
+  color: lighten(theme-color('charcoal'), 15%);
+  .exp-type {
+    padding-top: 50px;
+  }
+  p{
+    margin-bottom: 25px;
+  }
+  .row {
+    font-size: 1em;
+    .title {
+      font-family: 'Lato';
+      font-size: 1em;
+      font-weight: 700;
+
+      .subtitle {
+        font-family: 'Lato';
+        font-size: 1em;
+        font-weight: 300;
+      }
+    }
+    .details {
+      font-family: 'Lato';
+      font-size: 1em;
+      color: lighten(theme-color('charcoal'), 30%);
+    }
+    .date {
+      font-size: 0.9em;
+    }
+  }
+}
+/*
+/*
+
+Skills
+
+ */
+#skills {
+  background-color: theme-color('charcoal');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h5,
+  p {
+    color: color-yiq(theme-color('charcoal'));
+  }
+  .skill-chart {
+    width: 150px;
+    circle {
+      fill: transparent;
+    }
+    .donut-hole {
+      fill: theme-color('charcoal');
+    }
+    .donut-ring {
+      stroke: color-yiq(theme-color('teal'));
+    }
+    .donut-segment {
+      stroke: theme-color('teal');
+      animation: dash 1s ease-out 1;
+      animation-fill-mode: backwards;
+    }
+  }
+}
+@keyframes dash {
+  from {
+    stroke-dasharray: 0 100;
   }
 }

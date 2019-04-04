@@ -4,6 +4,9 @@ import { GatsbyImageProps, default as Img } from 'gatsby-image';
 import { Helmet } from 'react-helmet';
 import Header from '../components/Header';
 import Cover from '../components/Cover';
+import About from '../components/About';
+import Work from '../components/Work';
+import Skills from '../components/Skills';
 
 interface IndexPageProps {
   data: {
@@ -33,7 +36,12 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           <meta name='keywords' content={this.props.data.site.siteMetadata.keywords} />
         </Helmet>
         <Header />
-        <Cover />
+        <div data-spy='scroll' data-target='#header' data-offset='0'>
+          <Cover />
+          <About />
+          <Work />
+          <Skills />
+        </div>
       </div>
     );
   }
