@@ -101,7 +101,7 @@ Cover
 
  */
 #cover {
-  margin-top: 60px;
+  margin-top: 87px;
   .gatsby-background-image-cover {
     padding-top: 140px;
     min-height: 500px;
@@ -115,6 +115,12 @@ Cover
     h3 {
       color: white;
       font-size: 1.5em;
+    }
+    .divider {
+      height: 1.2em;
+      fill: transparent;
+      stroke: white;
+      stroke-width: 1;
     }
   }
 }
@@ -131,8 +137,8 @@ About
   p {
     color: color-yiq(theme-color('charcoal'));
   }
-  .download{
-    font-size: .9em;
+  .download {
+    font-size: 0.9em;
   }
 }
 
@@ -141,12 +147,12 @@ About
 Work
 
  */
-#work {
+#work, #local {
   color: lighten(theme-color('charcoal'), 15%);
   .exp-type {
     padding-top: 50px;
   }
-  p{
+  p {
     margin-bottom: 25px;
   }
   .row {
@@ -199,13 +205,39 @@ Skills
     }
     .donut-segment {
       stroke: theme-color('teal');
-      animation: dash 1s ease-out 1;
-      animation-fill-mode: backwards;
+    }
+    &.animate {
+      .donut-segment {
+        animation: dash 1s ease-out 1;
+        animation-fill-mode: backwards;
+      }
     }
   }
 }
 @keyframes dash {
   from {
     stroke-dasharray: 0 100;
+  }
+}
+
+/*
+
+Local
+
+ */
+#local {
+}
+/*
+
+Connect
+
+ */
+#connect {
+  background-color: theme-color('darkest');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h5,
+  p {
+    color: color-yiq(theme-color('darkest'));
   }
 }

@@ -2,6 +2,7 @@ import * as React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
+import { Link, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 interface Tab {
   icon: string;
@@ -24,17 +25,38 @@ const Header = () => {
       slug: 'work',
     },
     {
+      icon: 'screwdriver',
+      label: 'Skills',
+      slug: 'skills',
+    },
+    {
       icon: 'users',
       label: 'Local',
       slug: 'community',
     },
     {
       icon: 'envelope',
-      label: 'Contact',
-      slug: 'contact',
+      label: 'Connect',
+      slug: 'connect',
     },
   ];
   const breakpoint = true;
+
+  const animate = () => {
+    const el = document.getElementById('skills');
+    const isVisible = (element: HTMLElement) => {
+      const rect = element.getBoundingClientRect();
+      const viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+      return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
+    };
+    if (el && isVisible(el)) {
+      const list = el.getElementsByClassName('skill-chart');
+
+      Array.from(list, item => {
+        item.classList.add('animate');
+      });
+    }
+  };
   return (
     <Navbar id={'header'} collapseOnSelect={true} fixed={'top'} expand={breakpoint} bg='slate' variant='dark'>
       <Container>
@@ -43,10 +65,21 @@ const Header = () => {
           <Nav className='mx-auto text-center'>
             {tabs.map((tab: Tab, index: number) => {
               return (
-                <Nav.Link key={tab.slug} href={`#${tab.slug}`} title={tab.label}>
+                <Link
+                  key={tab.slug}
+                  title={tab.label}
+                  activeClass='active'
+                  to={tab.slug}
+                  spy={true}
+                  smooth={'easeOutQuad'}
+                  offset={-88}
+                  duration={500}
+                  delay={0}
+                  onSetActive={animate}
+                >
                   <i className={`fas fa-${tab.icon}`} />
-                  <div className='hide-expanded'>{tab.label}</div>
-                </Nav.Link>
+                  <div>{tab.label}</div>
+                </Link>
               );
             })}
           </Nav>

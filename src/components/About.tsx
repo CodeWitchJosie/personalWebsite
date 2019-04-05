@@ -26,10 +26,10 @@ const About = () => {
             </p>
           </div>
           <div className='col-lg-3'>
-            <p className="download">
+            <p className='download'>
               <a href='../assets/resume.pdf' download={true}>
                 <i className='fas fa-download' /> &ensp;
-                <span className="text-uppercase">Download Resume</span>
+                <span className='text-uppercase'>Download Resume</span>
               </a>
             </p>
           </div>

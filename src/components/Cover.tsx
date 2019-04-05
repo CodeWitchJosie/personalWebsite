@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import { graphql, StaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
+import Divider from './Divider';
 
 // , duotone: { highlight: "#283246", shadow: "#283246", opacity: 70 }
 
@@ -29,6 +30,9 @@ const Cover = () => (
               <Row className='text-center'>
                 <div className='col-12'>
                   <h1>Jocelyn Irwin</h1>
+                  <p>
+                    <Divider />
+                  </p>
                   <h3>Code Witch</h3>
                 </div>
               </Row>

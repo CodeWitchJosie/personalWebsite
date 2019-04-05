@@ -7,6 +7,8 @@ import Cover from '../components/Cover';
 import About from '../components/About';
 import Work from '../components/Work';
 import Skills from '../components/Skills';
+import Local from '../components/Local';
+import Connect from '../components/Connect';
 
 interface IndexPageProps {
   data: {
@@ -23,7 +25,6 @@ interface IndexPageProps {
     };
   };
 }
-
 export default class IndexPage extends React.Component<IndexPageProps, {}> {
   public render() {
     return (
@@ -36,11 +37,13 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
           <meta name='keywords' content={this.props.data.site.siteMetadata.keywords} />
         </Helmet>
         <Header />
-        <div data-spy='scroll' data-target='#header' data-offset='0'>
+        <div>
           <Cover />
           <About />
           <Work />
           <Skills />
+          <Local />
+          <Connect />
         </div>
       </div>
     );

@@ -26,6 +26,7 @@
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.6",
     "@types/react-helmet": "^5.0.8",
+    "@types/react-scroll": "^1.5.4",
     "babel-preset-gatsby": "^0.1.4",
     "bootstrap": "^4.3.1",
     "gatsby": "^2.3.4",
@@ -49,6 +50,7 @@
     "react-bootstrap": "^1.0.0-beta.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
+    "react-scroll": "^1.7.11",
     "sass": "^1.17.3",
     "typescript": "^3.1.6"
   },

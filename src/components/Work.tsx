@@ -32,7 +32,7 @@ const Work = () => {
     },
   ];
   const renderSection = (rows: Experience[], label: string) => {
-    if (rows.length == 0) {
+    if (rows.length === 0) {
       return null;
     }
     return (
