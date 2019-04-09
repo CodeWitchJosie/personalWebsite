@@ -17,8 +17,8 @@ const About = () => {
             </p>
             <p>
               I have a breadth of experience developing rapid prototypes, maturing prototypes to production software,
-              and improving and maintaining existing production systems. experience leading agile teams under tight
-              deadlines
+              improving and maintaining existing production systems. as well as experience leading agile teams under
+              tight deadlines
             </p>
             <p>
               I am well versed in Lean product development, agile software development practices, requirements

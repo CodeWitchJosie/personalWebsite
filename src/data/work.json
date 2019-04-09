@@ -1,0 +1,16 @@
+[
+  {
+    "type": "EDUCATION",
+    "title": "Bachelors in Computer Science",
+    "subtitle": "Virginia Tech",
+    "details": "Minor in Mathematics",
+    "date": "May 2008"
+  },
+  {
+    "type": "JOB",
+    "title": "Stuff",
+    "subtitle": "Virginia Tech",
+    "details": "Minor in Mathematics",
+    "date": "May 2008"
+  }
+]

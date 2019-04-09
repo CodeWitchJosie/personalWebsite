@@ -52,6 +52,24 @@ hr {
   padding: 0;
 }
 
+.title {
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.details {
+  font-family: 'Lato';
+  font-size: 1em;
+  color: lighten(theme-color('charcoal'), 30%);
+}
+
 /*
 Header
  */
@@ -147,7 +165,9 @@ About
 Work
 
  */
-#work, #local {
+
+#work,
+#local {
   color: lighten(theme-color('charcoal'), 15%);
   .exp-type {
     padding-top: 50px;
@@ -155,27 +175,8 @@ Work
   p {
     margin-bottom: 25px;
   }
-  .row {
-    font-size: 1em;
-    .title {
-      font-family: 'Lato';
-      font-size: 1em;
-      font-weight: 700;
-
-      .subtitle {
-        font-family: 'Lato';
-        font-size: 1em;
-        font-weight: 300;
-      }
-    }
-    .details {
-      font-family: 'Lato';
-      font-size: 1em;
-      color: lighten(theme-color('charcoal'), 30%);
-    }
-    .date {
-      font-size: 0.9em;
-    }
+  .date {
+    font-size: 0.9em;
   }
 }
 /*
@@ -236,8 +237,17 @@ Connect
   background-color: theme-color('darkest');
   padding-top: 60px;
   padding-bottom: 60px;
-  h5,
-  p {
+  color: color-yiq(theme-color('darkest'));
+  h5 {
     color: color-yiq(theme-color('darkest'));
+  }
+  .social a {
+    font-size: 0.5em;
+    i {
+      padding-right: 8px;
+      &.fa-inverse {
+        color: theme-color('darkest');
+      }
+    }
   }
 }

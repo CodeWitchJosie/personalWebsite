@@ -13,6 +13,14 @@ module.exports = {
       options: {
         name: `images`,
         path: path.join(__dirname, `src`, `images`),
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      }
+    }, {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `data`,
+        path: path.join(__dirname, `src`, `data`),
+        ignore: [`**/\.*`], // ignore files starting with a dot
       }
     },
     {
@@ -54,6 +62,7 @@ module.exports = {
     },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-netlify`,
     'gatsby-plugin-react-helmet',

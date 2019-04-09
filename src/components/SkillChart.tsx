@@ -21,8 +21,8 @@ const SkillChart = (props: Skill) => {
           cx='21'
           cy='21'
           r='15.91549430918954'
-          stroke-dasharray={`${props.percent} ${100 - props.percent}`}
-          stroke-dashoffset='25'
+          strokeDasharray={`${props.percent} ${100 - props.percent}`}
+          strokeDashoffset='25'
         />
       </svg>
     </div>

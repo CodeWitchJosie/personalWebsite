@@ -7,7 +7,7 @@ import Row from 'react-bootstrap/Row';
 interface State {
   email: string; // hopefully obfuscating email while still providing a nice ux
 }
-export default class Countdown extends React.Component<{}, State> {
+export default class Connect extends React.Component<{}, State> {
   constructor(props: any) {
     super(props);
 
@@ -28,31 +28,35 @@ export default class Countdown extends React.Component<{}, State> {
             </div>
             <div className='col-lg-4'>
               <p className='title'>Email</p>
-              <p className="details">
+              <p className='details'>
                 <a href={`mailto:${this.state.email}`}>Email Me</a>
               </p>
               <p className='title'>Location</p>
-              <p className="details">
-              <div>Ellicott City </div>
-              <div>Maryland, USA</div>
-              </p>
+              <div className='details'>
+                <div>Ellicott City </div>
+                <p className='details'>Maryland, USA</p>
+              </div>
               <p className='title'>Follow Me</p>
-              <p className="details">
-              <a href='#'>
-                <i className='fab fa-dribbble' />
-              </a>
-              <a href='#'>
-                <i className='fab fa-twitter' />
-              </a>
-              <a href='#'>
-                <i className='fab fa-facebook' />
-              </a>
-              <a href='#'>
-                <i className='fab fa-linkedin' />
-              </a>
-              <a href='#'>
-                <i className='fab fa-apple' />
-              </a>
+              <p className='details social'>
+                <a href='https://twitter.com/CodeWitchJosie' target='_blank'>
+                  <span className='fa-stack fa-2x'>
+                    <i className='fas fa-circle fa-stack-2x' />
+                    <i className='fab fa-twitter fa-stack-1x fa-inverse' />
+                  </span>
+                </a>
+                <a href='https://www.linkedin.com/in/jocelyncasto/' target='_blank'>
+                  <span className='fa-stack fa-2x'>
+                    <i className='fas fa-circle fa-stack-2x' />
+                    <i className='fab fa-linkedin fa-stack-1x fa-inverse' />
+                  </span>
+                </a>
+                <a href='https://github.com/jlcasto/' target='_blank'>
+                  <span className='fa-stack fa-2x'>
+                    <i className='fas fa-circle fa-stack-2x' />
+                    <i className='fab fa-github fa-stack-1x fa-inverse' />
+                  </span>
+                </a>
+
               </p>
             </div>
             <div className='col-lg-5'>Contact form goes here</div>
