@@ -77,6 +77,12 @@ Header
 #header {
   background: theme-color('slate');
   padding: 0;
+  .navbar-toggler {
+	  margin: 22px -65px;
+    .navbar-toggler-icon {
+      margin: 2px -6px;
+    }
+  }
   .navbar-nav {
     position: relative;
     margin: 0;
