@@ -50,7 +50,7 @@ const Header = () => {
         return (
           <Navbar id={'header'} collapseOnSelect={true} fixed={'top'} expand={breakpoint} bg='slate' variant='dark'>
             <Container>
-              <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+              <Navbar.Toggle aria-controls='responsive-navbar-nav' className='mx-auto' />
               <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav className='mx-auto text-center'>
                   {tabs.map((tab: Tab, index: number) => {
