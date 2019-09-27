@@ -30,7 +30,7 @@ const Header = () => {
       `}
       render={results => {
         const tabs: Tab[] = results.allNavLinksJson.edges.map((item: JsonQueryEdge) => item.node);
-        const breakpoint = 'lg';
+        const breakpoint = 'sm';
 
         const animate = () => {
           const el = document.getElementById('skills');
