@@ -48,14 +48,14 @@ const Header = () => {
           }
         };
         return (
-          <Navbar.Collapse id={'header'} collapseOnSelect={true} fixed={'top'} expand={breakpoint} bg='slate' variant='dark'>
+          <Navbar id={'header'} collapseOnSelect fixed={'top'} expand={breakpoint} bg='slate' variant='dark'>
             <Container>
               <Navbar.Toggle aria-controls='responsive-navbar-nav' className='mx-auto' />
               <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav className='mx-auto text-center'>
                   {tabs.map((tab: Tab, index: number) => {
                     return (
-                      <Link
+                      <Nav.Link
                         key={tab.slug}
                         title={tab.label}
                         activeClass='active'
