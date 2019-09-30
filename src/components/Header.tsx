@@ -69,7 +69,7 @@ const Header = () => {
                       >
                         <i className={`fas fa-${tab.icon}`} />
                         <div>{tab.label}</div>
-                      </Link>
+                      </Nav.Link>
                     );
                   })}
                 </Nav>
