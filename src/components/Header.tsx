@@ -48,7 +48,7 @@ const Header = () => {
           }
         };
         return (
-          <Navbar id={'header'} collapseOnSelect={true} fixed={'top'} expand={breakpoint} bg='slate' variant='dark'>
+          <Navbar.Collapse id={'header'} collapseOnSelect={true} fixed={'top'} expand={breakpoint} bg='slate' variant='dark'>
             <Container>
               <Navbar.Toggle aria-controls='responsive-navbar-nav' className='mx-auto' />
               <Navbar.Collapse id='responsive-navbar-nav'>
