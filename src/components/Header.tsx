@@ -55,7 +55,7 @@ const Header = () => {
                 <Nav className='mx-auto text-center'>
                   {tabs.map((tab: Tab, index: number) => {
                     return (
-                      <Nav.Link
+                      <Link
                         key={tab.slug}
                         title={tab.label}
                         activeClass='active'
@@ -69,7 +69,7 @@ const Header = () => {
                       >
                         <i className={`fas fa-${tab.icon}`} />
                         <div>{tab.label}</div>
-                      </Nav.Link>
+                      </Link>
                     );
                   })}
                 </Nav>
