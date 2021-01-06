@@ -54,21 +54,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Raleway`,
-            variants: [`300`, `400`, `700`],
-          },
-          {
-            family: `Lato`,
-            variants: [`300`, `400`, `700`, `300italic`, `400italic`],
-          },
-          {
-            family: `Allura`,
-            variants: [`400`],
-          },
+            `Raleway\:300,400,700`,
+            `Lato\:300,400,700,300i,400i`,
+            `Allura\:400`
         ],
       },
     },
