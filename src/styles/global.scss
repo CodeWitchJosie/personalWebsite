@@ -1,1 +1,259 @@
 @import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-free/css/all.css';
+@import './colors.scss';
+
+//TODO: break sections out into css modules
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Lato';
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Raleway';
+  font-weight: 300;
+  color: #333;
+}
+h5 {
+  font-size: 0.9em;
+}
+a {
+  color: theme-color('light-purple');
+  word-wrap: break-word;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+  &:hover,
+  &:focus {
+    color: theme-color('bright-purple');
+    text-decoration: none;
+    outline: 0;
+  }
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+.title {
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-family: 'Lato';
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.details {
+  font-family: 'Lato';
+  font-size: 1em;
+  color: lighten(theme-color('charcoal'), 30%);
+}
+
+/*
+Header
+ */
+
+#header {
+  background: theme-color('slate');
+  padding: 0;
+  .navbar-toggler {
+    margin: 22px 15px;
+    .navbar-toggler-icon {
+      margin: 2px -6px;
+    }
+  }
+  .navbar-nav {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid #222;
+    /* For IE, the outcast */
+    zoom: 1;
+    a {
+      color: color-yiq(theme-color('slate'));
+      display: block;
+      text-decoration: none;
+      padding: 18px 20px 18px 20px;
+      border-left: 1px solid #222;
+      &:hover {
+        background: #222;
+        text-decoration: none;
+        border-left: 1px solid #111;
+      }
+      &:focus {
+        background: #111;
+        text-decoration: none;
+        border-left: 1px solid #111;
+      }
+      i {
+        font-size: 25px;
+      }
+    }
+    a.active {
+      background: theme-color('bright-purple');
+      border-left: 1px solid #111;
+      &:hover {
+        background: theme-color('bright-purple');
+      }
+    }
+  }
+}
+/*
+
+Cover
+
+ */
+#cover {
+  margin-top: 87px;
+  .gatsby-background-image-cover {
+    padding-top: 140px;
+    min-height: 500px;
+    width: 100%;
+    word-wrap: break-word;
+    h1 {
+      font-family: 'Allura';
+      font-size: 6em;
+      color: white;
+    }
+    h3 {
+      color: white;
+      font-size: 1.5em;
+    }
+    .divider {
+      height: 1.2em;
+      fill: transparent;
+      stroke: white;
+      stroke-width: 1;
+    }
+  }
+}
+/*
+
+About
+
+ */
+#about {
+  background-color: theme-color('charcoal');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h5,
+  p {
+    color: color-yiq(theme-color('charcoal'));
+  }
+  .download {
+    font-size: 0.9em;
+  }
+}
+
+/*
+
+Work
+
+ */
+
+#work,
+#local {
+  color: lighten(theme-color('charcoal'), 15%);
+  .exp-type {
+    padding-top: 50px;
+  }
+  p {
+    margin-bottom: 25px;
+  }
+  .date {
+    font-size: 0.9em;
+  }
+}
+/*
+/*
+
+Skills
+
+ */
+#skills {
+  background-color: theme-color('charcoal');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  h5,
+  p {
+    color: color-yiq(theme-color('charcoal'));
+  }
+  .skill-chart {
+    width: 150px;
+    circle {
+      fill: transparent;
+    }
+    .donut-hole {
+      fill: theme-color('charcoal');
+    }
+    .donut-ring {
+      stroke: color-yiq(theme-color('teal'));
+    }
+    .donut-segment {
+      stroke: theme-color('teal');
+    }
+    &.animate {
+      .donut-segment {
+        animation: dash 1s ease-out 1;
+        animation-fill-mode: backwards;
+      }
+    }
+  }
+}
+@keyframes dash {
+  from {
+    stroke-dasharray: 0 100;
+  }
+}
+
+/*
+
+Local
+
+ */
+#local {
+}
+/*
+
+Connect
+
+ */
+#connect {
+  background-color: theme-color('darkest');
+  padding-top: 60px;
+  padding-bottom: 60px;
+  color: color-yiq(theme-color('darkest'));
+  h5 {
+    color: color-yiq(theme-color('darkest'));
+  }
+  .social a {
+    font-size: 0.5em;
+    i {
+      padding-right: 8px;
+      &.fa-inverse {
+        color: theme-color('darkest');
+      }
+    }
+  }
+}

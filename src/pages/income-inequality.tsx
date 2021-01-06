@@ -1,46 +1,33 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImageProps, default as Img } from 'gatsby-image';
+import * as moment from 'moment';
 import { Helmet } from 'react-helmet';
-import Header from '../components/Header';
-import Cover from '../components/Cover';
-import About from '../components/About';
-import Work from '../components/Work';
-import Skills from '../components/Skills';
-import Local from '../components/Local';
-import Connect from '../components/Connect';
 
-interface IndexPageProps {
+interface IncomeInequalityPageProps {
   data: {
     site: {
       siteMetadata: {
         title: string;
         description: string;
         canonical: string;
-        keywords: string;
       };
     };
   };
 }
-export default class IndexPage extends React.Component<IndexPageProps, {}> {
+
+export default class IncomeInequalityPage extends React.Component<IncomeInequalityPageProps, {}> {
   public render() {
     return (
-      <div>
+      <div className={'container-fluid'}>
         <Helmet htmlAttributes={{ lang: 'en' }}>
           <meta charSet='utf-8' />
           <title>{this.props.data.site.siteMetadata.title}</title>
           <link rel='canonical' href={this.props.data.site.siteMetadata.canonical} />
           <meta name='description' content={this.props.data.site.siteMetadata.description} />
-          <meta name='keywords' content={this.props.data.site.siteMetadata.keywords} />
         </Helmet>
-        <Header />
-        <div>
-          <Cover />
-          <About />
-          <Work />
-          <Skills />
-          <Local />
-          <Connect />
+        <div className={`row justify-content-center`}>
+          <h1>Income Inequality Infographic</h1>
+          <p>Coming Soon</p>
         </div>
       </div>
     );
@@ -54,7 +41,6 @@ export const query = graphql`
         title
         description
         canonical
-        keywords
       }
     }
   }

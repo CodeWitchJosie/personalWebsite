@@ -1,0 +1,38 @@
+[
+  {
+    "label": "JavaScript",
+    "percent": 95
+  },
+  {
+    "label": "TypeScript",
+    "percent": 90
+  },
+  {
+    "label": "React",
+    "percent": 80
+  },
+  {
+    "label": "Angular",
+    "percent": 60
+  },
+  {
+    "label": "Bootstrap",
+    "percent": 90
+  },
+  {
+    "label": "HTML5",
+    "percent": 90
+  },
+  {
+    "label": "Sass/CSS",
+    "percent": 70
+  },
+  {
+    "label": "Java",
+    "percent": 60
+  },
+  {
+    "label": "Python",
+    "percent": 60
+  }
+]

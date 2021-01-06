@@ -1,0 +1,16 @@
+[
+  {
+    "details": "Tech Changers is a Howard County nonprofit focused on creating a diverse community of youth makers, technologists, leaders, and innovators by providing all students, especially underrepresented and socioeconomically challenged groups, with opportunities to discover and foster their passion for STEM and computing.",
+    "involvement": "I served on the board of directors for Tech Changers from the summer of 2019 through the summer of 2020.  I am passionate about engaging girls in computing topics and building a pipeline of qualified and engaged talent for the industry. ",
+    "img": "../images/techchangers.png",
+    "title": "Tech Changers",
+    "url": "http://www.techchangers.org/"
+  },
+  {
+    "details": "Hero Dogs, Inc. improves quality of life for our nation’s heroes and first responders by raising, training, and placing service dogs and other highly skilled canines, free of charge with lifetime support of the partnerships",
+    "involvement": "I have been volunteering at Hero Dogs since 2013 and spent 4.5 years of that time working as a kennel volunteer on Sunday mornings.  Merging patriotism, dogs, and help for the local community was a natural fit for me and I am eager to continue volunteering with the dogs post-pandemic.",
+    "img": "../images/herodogs.png",
+    "title": "Hero Dogs",
+    "url": "https://www.hero-dogs.org"
+  }
+]

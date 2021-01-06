@@ -1,0 +1,44 @@
+[
+  {
+    "type": "EDUCATION",
+    "title": "Bachelors in Computer Science",
+    "subtitle": "Virginia Tech",
+    "details": ["Minor in Mathematics"],
+    "date": "May 2008"
+  },
+  {
+    "type": "JOB",
+    "title": "Principal Software Engineer",
+    "subtitle": "Anthem Engineering",
+    "details": ["Job details awaiting review", "More Details"],
+    "date": "2017 - Present"
+  },
+  {
+    "type": "JOB",
+    "title": "Senior Software Engineer",
+    "subtitle": "Asymmetrik",
+    "details": ["Job details awaiting review", "More Details"],
+    "date": "2014 - 2017"
+  },
+  {
+    "type": "JOB",
+    "title": "Senior Software Engineer",
+    "subtitle": "Raytheon Henggeler Consulting",
+    "details": ["Job details awaiting review", "More Details"],
+    "date": "2012 - 2014"
+  },
+  {
+    "type": "JOB",
+    "title": "Senior Software Engineer",
+    "subtitle": "Next Century Corporation",
+    "details": ["Job details awaiting review", "More Details"],
+    "date": "2009 - 2012"
+  },
+  {
+    "type": "JOB",
+    "title": "Software Engineer I",
+    "subtitle": "Meridium",
+    "details": ["Job details awaiting review", "More Details"],
+    "date": "2007 - 2009"
+  }
+]

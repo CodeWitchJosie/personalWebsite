@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "user",
+    "label": "About",
+    "slug": "about"
+  },
+  {
+    "icon": "briefcase",
+    "label": "Work",
+    "slug": "work"
+  },
+  {
+    "icon": "screwdriver",
+    "label": "Skills",
+    "slug": "skills"
+  },
+  {
+    "icon": "users",
+    "label": "Local",
+    "slug": "local"
+  },
+  {
+    "icon": "envelope",
+    "label": "Connect",
+    "slug": "connect"
+  }
+]
