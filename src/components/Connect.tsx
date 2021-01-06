@@ -44,19 +44,18 @@ export default class Connect extends React.Component<{}, State> {
                     <i className='fab fa-twitter fa-stack-1x fa-inverse' />
                   </span>
                 </a>
-                <a href='https://www.linkedin.com/in/jocelyncasto/' target='_blank'>
+                <a href='https://www.linkedin.com/in/codewitchjosie/' target='_blank'>
                   <span className='fa-stack fa-2x'>
                     <i className='fas fa-circle fa-stack-2x' />
                     <i className='fab fa-linkedin fa-stack-1x fa-inverse' />
                   </span>
                 </a>
-                <a href='https://github.com/jlcasto/' target='_blank'>
+                <a href='https://github.com/codewitchjosie/' target='_blank'>
                   <span className='fa-stack fa-2x'>
                     <i className='fas fa-circle fa-stack-2x' />
                     <i className='fab fa-github fa-stack-1x fa-inverse' />
                   </span>
                 </a>
-
               </p>
             </div>
             <div className='col-lg-5'>Contact form goes here</div>

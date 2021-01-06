@@ -12,9 +12,6 @@ import Connect from '../components/Connect';
 
 interface IndexPageProps {
   data: {
-    fedoraImg: {
-      childImageSharp: GatsbyImageProps;
-    };
     site: {
       siteMetadata: {
         title: string;
@@ -52,15 +49,6 @@ export default class IndexPage extends React.Component<IndexPageProps, {}> {
 
 export const query = graphql`
   query {
-    fedoraImg: file(relativePath: { eq: "fedora.png" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 200) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
     site: site {
       siteMetadata {
         title

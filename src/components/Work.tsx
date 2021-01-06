@@ -3,6 +3,7 @@ import { graphql, StaticQuery } from 'gatsby';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { JsonQueryEdge } from '../utils/graphQlUtils';
+import ReactMarkdown from 'react-markdown';
 
 enum ExpType {
   Job = 'JOB',
@@ -12,7 +13,7 @@ interface Experience {
   title: string;
   type: ExpType;
   subtitle?: string;
-  details?: string;
+  details: string[];
   date: string;
 }
 
@@ -61,7 +62,11 @@ const Work = () => {
                         {item.title}
                         <div className='subtitle'>{item.subtitle}</div>
                       </p>
-                      <p className='details font-italic'>{item.details}</p>
+                      {item.details.map((bullet: string, index: number) => (
+                        <div className='details font-italic'>
+                          <ReactMarkdown>{bullet}</ReactMarkdown>
+                        </div>
+                      ))}
                     </div>
                     <div className='col-lg-4'>
                       <h5 className='date text-uppercase'>{item.date}</h5>

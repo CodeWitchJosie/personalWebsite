@@ -1,0 +1,11 @@
+src/assets
+src/images
+/.cache
+/public
+/dist
+.DS_Store
+node_modules
+*.iml
+/.idea
+.*ignore
+.editorconfig

@@ -5,8 +5,6 @@ import { graphql, StaticQuery } from 'gatsby';
 import BackgroundImage from 'gatsby-background-image';
 import Divider from './Divider';
 
-// , duotone: { highlight: "#283246", shadow: "#283246", opacity: 70 }
-
 const Cover = () => (
   <StaticQuery
     query={graphql`

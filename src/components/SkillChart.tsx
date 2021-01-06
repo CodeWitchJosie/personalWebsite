@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Skill from './Skills';
+import { Skill } from './Skills';
 
 const SkillChart = (props: Skill) => {
   return (
