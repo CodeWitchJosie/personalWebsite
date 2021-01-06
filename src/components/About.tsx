@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { graphql, StaticQuery } from 'gatsby';
 import Img from 'gatsby-image';
+import resumePDF from '../assets/Resume.pdf';
 
 const About = () => (
   <StaticQuery
@@ -56,7 +57,7 @@ const About = () => (
               </div>
               <div className='col-lg-3'>
                 <p className='download'>
-                  <a href='../assets/Resume.pdf' download={true}>
+                  <a href={resumePDF} download>
                     <i className='fas fa-download' /> &ensp;
                     <span className='text-uppercase'>Download Resume</span>
                   </a>
