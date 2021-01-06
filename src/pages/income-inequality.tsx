@@ -21,7 +21,7 @@ export default class IncomeInequalityPage extends React.Component<IncomeInequali
       <div className={'container-fluid'}>
         <Helmet htmlAttributes={{ lang: 'en' }}>
           <meta charSet='utf-8' />
-          <title>{this.props.data.site.siteMetadata.title}</title>
+          <title>{this.props.data.site.siteMetadata.title} - Income Inequality</title>
           <link rel='canonical' href={this.props.data.site.siteMetadata.canonical} />
           <meta name='description' content={this.props.data.site.siteMetadata.description} />
         </Helmet>
