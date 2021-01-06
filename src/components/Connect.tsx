@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
+import {OutboundLink} from "gatsby-plugin-google-gtag";
 
 // Only use stateless functional components for leaf nodes.  Contact form will have state
 
@@ -38,24 +39,24 @@ export default class Connect extends React.Component<{}, State> {
               </div>
               <p className='title'>Follow Me</p>
               <p className='details social'>
-                <a href='https://twitter.com/CodeWitchJosie' target='_blank'>
+                <OutboundLink href='https://twitter.com/CodeWitchJosie' target='_blank'>
                   <span className='fa-stack fa-2x'>
                     <i className='fas fa-circle fa-stack-2x' />
                     <i className='fab fa-twitter fa-stack-1x fa-inverse' />
                   </span>
-                </a>
-                <a href='https://www.linkedin.com/in/codewitchjosie/' target='_blank'>
+                </OutboundLink>
+                <OutboundLink href='https://www.linkedin.com/in/codewitchjosie/' target='_blank'>
                   <span className='fa-stack fa-2x'>
                     <i className='fas fa-circle fa-stack-2x' />
                     <i className='fab fa-linkedin fa-stack-1x fa-inverse' />
                   </span>
-                </a>
-                <a href='https://github.com/codewitchjosie/' target='_blank'>
+                </OutboundLink>
+                <OutboundLink href='https://github.com/codewitchjosie/' target='_blank'>
                   <span className='fa-stack fa-2x'>
                     <i className='fas fa-circle fa-stack-2x' />
                     <i className='fab fa-github fa-stack-1x fa-inverse' />
                   </span>
-                </a>
+                </OutboundLink>
               </p>
             </div>
             <div className='col-lg-5'>Contact form goes here</div>

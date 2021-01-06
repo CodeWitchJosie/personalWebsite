@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import { graphql, StaticQuery } from 'gatsby';
 import { JsonQueryEdge } from '../utils/graphQlUtils';
 import Img, { GatsbyImageProps } from 'gatsby-image';
+import {OutboundLink} from "gatsby-plugin-google-gtag";
 
 export interface Org {
   details: string;
@@ -61,9 +62,9 @@ const Local = () => {
                         <p className='details'>{item.details}</p>
                         <p className='details'>{item.involvement}</p>
                         <p>
-                          <a href={item.url} target='_blank'>
+                          <OutboundLink href={item.url} target='_blank'>
                             {item.url}
-                          </a>
+                          </OutboundLink>
                         </p>
                       </div>
                     </Row>
