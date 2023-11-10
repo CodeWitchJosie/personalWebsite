@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import * as moment from 'moment';
 import { Helmet } from 'react-helmet';
 
 interface IncomeInequalityPageProps {

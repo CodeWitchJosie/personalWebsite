@@ -30,11 +30,21 @@ h5 {
 a {
   color: theme-color('light-purple');
   word-wrap: break-word;
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-  transition: color 0.1s ease-in, background 0.1s ease-in;
+  -webkit-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  -moz-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  -ms-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  -o-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
   &:hover,
   &:focus {
     color: theme-color('bright-purple');
@@ -126,11 +136,14 @@ Cover
  */
 #cover {
   margin-top: 87px;
-  .gatsby-background-image-cover {
+  display: grid;
+  height: 500px;
+  .backgroundImageSection {
     padding-top: 140px;
-    min-height: 500px;
     width: 100%;
     word-wrap: break-word;
+    overflow: hidden;
+    grid-area: 1/1;
     h1 {
       font-family: 'Allura';
       font-size: 6em;
