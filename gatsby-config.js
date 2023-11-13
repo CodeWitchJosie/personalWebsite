@@ -76,8 +76,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify`,
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-plugin-image',
   ],
