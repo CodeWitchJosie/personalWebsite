@@ -18,7 +18,7 @@ Website Deploy Status:
 - [Running](#running)
 - [Deployment](#deployment)
 - [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
+- [Contributing](#contributions)
 - [Credits](#credits)
 - [License](#license)
 
@@ -134,7 +134,7 @@ gatsby develop
 
 The website will be accessible at http://localhost:8000.
 
-## Deployment 
+## Deployment
 
 (WIP...Directions drafted but not tested and verified)
 

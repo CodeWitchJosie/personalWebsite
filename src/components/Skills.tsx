@@ -2,7 +2,7 @@ import * as React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import SkillChart from './SkillChart';
-import { graphql, StaticQuery, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import { JsonQueryEdge } from '../utils/graphQlUtils';
 
 export interface Skill {

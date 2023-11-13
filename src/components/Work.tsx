@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { graphql, StaticQuery, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { JsonQueryEdge } from '../utils/graphQlUtils';
@@ -59,7 +59,7 @@ const Work = () => {
                   {item.title}
                   <div className='subtitle'>{item.subtitle}</div>
                 </p>
-                {item.details.map((bullet: string, index: number) => (
+                {item.details.map((bullet: string) => (
                   <div className='details font-italic'>
                     <ReactMarkdown>{bullet}</ReactMarkdown>
                   </div>

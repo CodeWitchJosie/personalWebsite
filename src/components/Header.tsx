@@ -50,7 +50,7 @@ const Header = () => {
         <Navbar.Toggle aria-controls='responsive-navbar-nav' className='mx-auto' />
         <Navbar.Collapse id='responsive-navbar-nav'>
           <Nav className='mx-auto text-center'>
-            {tabs.map((tab: Tab, index: number) => {
+            {tabs.map((tab: Tab) => {
               return (
                 <Link
                   key={tab.slug}

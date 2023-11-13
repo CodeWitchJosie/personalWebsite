@@ -3,11 +3,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
-// Only use stateless functional components for leaf nodes.  Contact form will have state
-
-interface State {
-  email: string; // hopefully obfuscating email while still providing a nice ux
-}
 const Connect = () => {
   const [email, setEmail] = useState('');
   useEffect(() => {
