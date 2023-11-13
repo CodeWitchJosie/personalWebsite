@@ -6,7 +6,7 @@
 
 body {
   background-color: #f2f2f2;
-  font-family: 'Lato';
+  font-family:  'Lato', 'sans-serif';
   font-weight: 300;
   font-size: 16px;
   color: #555;
@@ -20,7 +20,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway';
+  font-family: 'Raleway', 'sans-serif';
   font-weight: 300;
   color: #333;
 }
@@ -30,11 +30,21 @@ h5 {
 a {
   color: theme-color('light-purple');
   word-wrap: break-word;
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-  transition: color 0.1s ease-in, background 0.1s ease-in;
+  -webkit-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  -moz-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  -ms-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  -o-transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
+  transition:
+    color 0.1s ease-in,
+    background 0.1s ease-in;
   &:hover,
   &:focus {
     color: theme-color('bright-purple');
@@ -53,19 +63,19 @@ hr {
 }
 
 .title {
-  font-family: 'Lato';
+  font-family: 'Lato', 'sans-serif';
   font-size: 1em;
   font-weight: 700;
 }
 
 .subtitle {
-  font-family: 'Lato';
+  font-family:  'Lato', 'sans-serif';
   font-size: 1em;
   font-weight: 300;
 }
 
 .details {
-  font-family: 'Lato';
+  font-family:  'Lato', 'sans-serif';
   font-size: 1em;
   color: lighten(theme-color('charcoal'), 30%);
 }
@@ -126,13 +136,16 @@ Cover
  */
 #cover {
   margin-top: 87px;
-  .gatsby-background-image-cover {
+  display: grid;
+  height: 500px;
+  .backgroundImageSection {
     padding-top: 140px;
-    min-height: 500px;
     width: 100%;
     word-wrap: break-word;
+    overflow: hidden;
+    grid-area: 1/1;
     h1 {
-      font-family: 'Allura';
+      font-family: 'Allura', 'cursive';
       font-size: 6em;
       color: white;
     }

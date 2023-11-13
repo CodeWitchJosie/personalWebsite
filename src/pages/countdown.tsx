@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { graphql } from 'gatsby';
-import { GatsbyImageProps, default as Img } from 'gatsby-image';
+import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import Countdown from '../components/Countdown';
 import * as moment from 'moment';
 import { Helmet } from 'react-helmet';
@@ -8,7 +8,7 @@ import { Helmet } from 'react-helmet';
 interface CountdownPageProps {
   data: {
     fedoraImg: {
-      childImageSharp: GatsbyImageProps;
+      childImageSharp: IGatsbyImageData;
     };
     site: {
       siteMetadata: {
@@ -40,7 +40,7 @@ export default class CountdownPage extends React.Component<CountdownPageProps, {
         </div>
         <div className={`row justify-content-center`}>
           <div className={`col-4`}>
-            <Img fluid={this.props.data.fedoraImg.childImageSharp.fluid} />
+            <GatsbyImage image={getImage(this.props.data.fedoraImg.childImageSharp)!} alt={'TODO: alt text"'} />
           </div>
         </div>
       </div>
@@ -49,14 +49,10 @@ export default class CountdownPage extends React.Component<CountdownPageProps, {
 }
 
 export const query = graphql`
-  query {
+  {
     fedoraImg: file(relativePath: { eq: "fedora.png" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid(maxWidth: 200) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 200, layout: CONSTRAINED)
       }
     }
     site: site {

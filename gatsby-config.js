@@ -13,8 +13,8 @@ module.exports = {
       options: {
         // You can add multiple tracking ids and a pageview event will be fired for all of them.
         trackingIds: [
-          "G-S5Q1TY8B2P", // Google Analytics ID
-          "257417247",
+          'G-S5Q1TY8B2P', // Google Analytics ID
+          '257417247',
         ],
         // This object gets passed directly to the gtag config command
         // This config will be shared across all trackingIds
@@ -28,7 +28,7 @@ module.exports = {
           // Setting this parameter is also optional
           respectDNT: true,
           // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
+          exclude: ['/preview/**', '/do-not-track/me/too/'],
         },
       },
     },
@@ -69,20 +69,17 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-            `Raleway\:300,400,700`,
-            `Lato\:300,400,700,300i,400i`,
-            `Allura\:400`
-        ],
+        fonts: [`Raleway\:300,400,700`, `Lato\:300,400,700,300i,400i`, `Allura\:400`],
       },
     },
     `gatsby-plugin-typescript`,
     `gatsby-transformer-sharp`,
     `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
-    `gatsby-plugin-netlify`,
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
-    `gatsby-background-image`,
+    'gatsby-plugin-image',
   ],
+  flags: {
+    DEV_SSR: true,
+  },
 };
