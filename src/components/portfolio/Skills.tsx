@@ -3,7 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import SkillChart from './SkillChart';
 import { graphql, useStaticQuery } from 'gatsby';
-import { JsonQueryEdge } from '../utils/graphQlUtils';
+import { JsonQueryEdge } from '../../utils/graphQlUtils';
 
 export interface Skill {
   label: string;

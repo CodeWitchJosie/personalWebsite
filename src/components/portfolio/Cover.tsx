@@ -8,7 +8,7 @@ import Divider from './Divider';
 const Cover = () => {
   const data = useStaticQuery(graphql`
     {
-      coverImg: file(relativePath: { eq: "books-dark.png" }) {
+      coverImg: file(relativePath: { eq: "cover-crystal.jpg" }) {
         childImageSharp {
           gatsbyImageData(
             quality: 100
@@ -23,12 +23,6 @@ const Cover = () => {
   const imageData = getImage(data.coverImg)!;
   return (
     <div id='cover'>
-      <GatsbyImage
-        className='backgroundImageSection'
-        image={imageData}
-        alt={'TODO: alt text'}
-        backgroundColor={'#111111'}
-      />
       <Container className='backgroundImageSection'>
         <Row className='text-center'>
           <div className='col-12'>
@@ -40,6 +34,12 @@ const Cover = () => {
           </div>
         </Row>
       </Container>
+      <GatsbyImage
+        className='backgroundImageSection'
+        image={imageData}
+        alt={'TODO: alt text'}
+        backgroundColor={'#111111'}
+      />
     </div>
   );
 };

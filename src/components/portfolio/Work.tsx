@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { JsonQueryEdge } from '../utils/graphQlUtils';
+import { JsonQueryEdge } from '../../utils/graphQlUtils';
 import ReactMarkdown from 'react-markdown';
 
 enum ExpType {
@@ -53,14 +53,14 @@ const Work = () => {
         </div>
         {rows.map((item: Experience, index: number) => {
           return (
-            <Row key={index} className={`no-gutters col-lg-9${index > 0 ? ' offset-lg-3' : ''}`}>
+            <Row key={index} className={`g-0 col-lg-9${index > 0 ? ' offset-lg-3' : ''}`}>
               <div className='col-lg-8'>
                 <p className='title'>
                   {item.title}
                   <div className='subtitle'>{item.subtitle}</div>
                 </p>
                 {item.details.map((bullet: string) => (
-                  <div className='details font-italic'>
+                  <div className='details fst-italic'>
                     <ReactMarkdown>{bullet}</ReactMarkdown>
                   </div>
                 ))}

@@ -1,12 +1,12 @@
 import * as React from 'react';
-import Header from '../components/Header';
-import Cover from '../components/Cover';
-import About from '../components/About';
-import Work from '../components/Work';
-import Skills from '../components/Skills';
-import Local from '../components/Local';
-import Connect from '../components/Connect';
-import Seo from '../components/Seo';
+import Header from '../components/portfolio/Header';
+import Cover from '../components/portfolio/Cover';
+import About from '../components/portfolio/About';
+import Work from '../components/portfolio/Work';
+import Skills from '../components/portfolio/Skills';
+import Local from '../components/portfolio/Local';
+import Connect from '../components/portfolio/Connect';
+import Seo from '../components/common/Seo';
 
 const IndexPage = () => {
   return (

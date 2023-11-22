@@ -1,11 +1,18 @@
-const path = require(`path`);
+import { createRequire } from "module"
+import { dirname, join } from "path"
+import { fileURLToPath } from "url"
 
-module.exports = {
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const require = createRequire(import.meta.url)
+
+const config = {
   siteMetadata: {
     title: 'Code Witch',
-    description: 'Josie is a professional Code Witch. She loves JavaScript, CSS, and discussing usability. Go Hokies!',
+    description:
+      'Jocelyn Irwin - Code Witch | Solving real-world problems through intuitive interfaces, clean code, and collaborative team cultures. Explore my projects and expertise in web development, React, and more.',
     canonical: 'https://www.jocelynirwin.com',
-    keywords: 'Developer,React,JavaScript,TypeScript,Female Engineer,Tech Lead,Manager',
+    keywords:
+      'Portfolio, Software Engineering, Web Development, React, TypeScript, Agile Methodologies, User Interface Design, User Experience, Developer Experience, Clean Code Practices, Prototyping, Lean Product Development, Technical Manager, Women in Computing',
   },
   plugins: [
     {
@@ -36,7 +43,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: path.join(__dirname, `src`, `images`),
+        path: join(__dirname, `src`, `images`),
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
@@ -44,7 +51,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `data`,
-        path: path.join(__dirname, `src`, `data`),
+        path: join(__dirname, `src`, `data`),
         ignore: [`**/\.*`], // ignore files starting with a dot
       },
     },
@@ -63,7 +70,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `standalone`,
-        icon: `src/images/icon.svg`, // This path is relative to the root of the site.
+        icon: `src/images/logo.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -80,6 +87,7 @@ module.exports = {
     'gatsby-plugin-image',
   ],
   flags: {
-    DEV_SSR: true,
+    // DEV_SSR: true,
   },
 };
+export default config;

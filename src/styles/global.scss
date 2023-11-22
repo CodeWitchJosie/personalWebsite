@@ -1,3 +1,5 @@
+@use "sass:map";
+
 @import '~bootstrap/scss/bootstrap';
 @import '~@fortawesome/fontawesome-free/css/all.css';
 @import './colors.scss';
@@ -28,8 +30,9 @@ h5 {
   font-size: 0.9em;
 }
 a {
-  color: theme-color('light-purple');
+  color: shade-color(map.get($portfolio-colors, 'bright-purple'), 30%);
   word-wrap: break-word;
+  text-decoration: none;
   -webkit-transition:
     color 0.1s ease-in,
     background 0.1s ease-in;
@@ -47,9 +50,19 @@ a {
     background 0.1s ease-in;
   &:hover,
   &:focus {
-    color: theme-color('bright-purple');
+    color: map.get($portfolio-colors, 'bright-purple');
     text-decoration: none;
     outline: 0;
+  }
+}
+.dark-bg {
+  a {
+    color: map.get($portfolio-colors, 'light-purple');
+
+    &:hover,
+    &:focus {
+      color: tint-color(map.get($portfolio-colors, 'light-purple'), 30%);
+    }
   }
 }
 
@@ -77,7 +90,7 @@ hr {
 .details {
   font-family:  'Lato', 'sans-serif';
   font-size: 1em;
-  color: lighten(theme-color('charcoal'), 30%);
+  color: tint-color(map.get($portfolio-colors, 'charcoal'), 30%);
 }
 
 /*
@@ -85,7 +98,7 @@ Header
  */
 
 #header {
-  background: theme-color('slate');
+  background: map.get($portfolio-colors, 'slate');
   padding: 0;
   .navbar-toggler {
     margin: 22px 15px;
@@ -101,7 +114,7 @@ Header
     /* For IE, the outcast */
     zoom: 1;
     a {
-      color: color-yiq(theme-color('slate'));
+      color: color-contrast(map.get($portfolio-colors, 'slate'));
       display: block;
       text-decoration: none;
       padding: 18px 20px 18px 20px;
@@ -121,10 +134,10 @@ Header
       }
     }
     a.active {
-      background: theme-color('bright-purple');
+      background: map.get($portfolio-colors, 'bright-purple');
       border-left: 1px solid #111;
       &:hover {
-        background: theme-color('bright-purple');
+        background: map.get($portfolio-colors, 'bright-purple');
       }
     }
   }
@@ -139,7 +152,10 @@ Cover
   display: grid;
   height: 500px;
   .backgroundImageSection {
-    padding-top: 140px;
+    &.gatsby-image-wrapper {
+      z-index: -1;
+    }
+    padding-top: 100px;
     width: 100%;
     word-wrap: break-word;
     overflow: hidden;
@@ -167,12 +183,12 @@ About
 
  */
 #about {
-  background-color: theme-color('charcoal');
+  background-color: map.get($portfolio-colors, 'charcoal');
   padding-top: 60px;
   padding-bottom: 60px;
   h5,
   p {
-    color: color-yiq(theme-color('charcoal'));
+    color: color-contrast(map.get($portfolio-colors, 'charcoal'));
   }
   .download {
     font-size: 0.9em;
@@ -187,7 +203,7 @@ Work
 
 #work,
 #local {
-  color: lighten(theme-color('charcoal'), 15%);
+  color: lighten(map.get($portfolio-colors, 'charcoal'), 15%);
   .exp-type {
     padding-top: 50px;
   }
@@ -205,12 +221,12 @@ Skills
 
  */
 #skills {
-  background-color: theme-color('charcoal');
+  background-color: map.get($portfolio-colors, 'charcoal');
   padding-top: 60px;
   padding-bottom: 60px;
   h5,
   p {
-    color: color-yiq(theme-color('charcoal'));
+    color: color-contrast(map.get($portfolio-colors, 'charcoal'));
   }
   .skill-chart {
     width: 150px;
@@ -218,13 +234,13 @@ Skills
       fill: transparent;
     }
     .donut-hole {
-      fill: theme-color('charcoal');
+      fill: map.get($portfolio-colors, 'charcoal');
     }
     .donut-ring {
-      stroke: color-yiq(theme-color('teal'));
+      stroke: color-contrast(map.get($portfolio-colors, 'teal'));
     }
     .donut-segment {
-      stroke: theme-color('teal');
+      stroke: map.get($portfolio-colors, 'teal');
     }
     &.animate {
       .donut-segment {
@@ -253,20 +269,23 @@ Connect
 
  */
 #connect {
-  background-color: theme-color('darkest');
+  background-color: map.get($portfolio-colors, 'darkest');
   padding-top: 60px;
   padding-bottom: 60px;
-  color: color-yiq(theme-color('darkest'));
+  color: color-contrast(map.get($portfolio-colors, 'darkest'));
   h5 {
-    color: color-yiq(theme-color('darkest'));
+    color: color-contrast(map.get($portfolio-colors, 'darkest'));
   }
   .social a {
     font-size: 0.5em;
     i {
       padding-right: 8px;
       &.fa-inverse {
-        color: theme-color('darkest');
+        color: map.get($portfolio-colors, 'darkest');
       }
     }
+  }
+  .details {
+    color: color-contrast(map.get($portfolio-colors, 'darkest'));
   }
 }

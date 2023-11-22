@@ -2,7 +2,7 @@ import * as React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import { graphql, useStaticQuery } from 'gatsby';
-import { JsonQueryEdge } from '../utils/graphQlUtils';
+import { JsonQueryEdge } from '../../utils/graphQlUtils';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
 import { OutboundLink } from 'gatsby-plugin-google-gtag';
 
@@ -45,7 +45,7 @@ const Local = () => {
           </div>
           {orgs.map((item: Org, index: number) => {
             return (
-              <Row key={index} className={`no-gutters col-lg-9${index > 0 ? ' offset-lg-3' : ''}`}>
+              <Row key={index} className={`g-0 col-lg-9${index > 0 ? ' offset-lg-3' : ''}`}>
                 <div className={`col-lg-3`}>
                   <div className={'bg-dark mx-4'}>
                     <GatsbyImage image={getImage(item.img.childImageSharp)!} className={'m-2'} alt={'TODO: alt text'} />

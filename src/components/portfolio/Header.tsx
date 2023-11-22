@@ -4,7 +4,7 @@ import Nav from 'react-bootstrap/Nav';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-scroll';
 import { graphql, useStaticQuery } from 'gatsby';
-import { JsonQueryEdge } from '../utils/graphQlUtils';
+import { JsonQueryEdge } from '../../utils/graphQlUtils';
 
 interface Tab {
   icon: string;

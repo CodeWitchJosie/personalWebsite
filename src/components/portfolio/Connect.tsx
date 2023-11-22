@@ -9,7 +9,7 @@ const Connect = () => {
     setEmail(['CodeWitch', '@', 'JocelynIrwin.com'].join(''));
   }, []);
   return (
-    <div id='connect'>
+    <div id='connect' className='dark-bg'>
       <Container>
         <Row>
           <div className='col-lg-2 offset-lg-1'>
