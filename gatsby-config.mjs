@@ -85,6 +85,7 @@ const config = {
     `gatsby-plugin-sharp`,
     'gatsby-plugin-offline',
     'gatsby-plugin-image',
+    'gatsby-transformer-remark'
   ],
   flags: {
     // DEV_SSR: true,

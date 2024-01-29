@@ -10,7 +10,8 @@ Website Deploy Status:
 
 - [Overview](#overview)
   - [Project History](#project-history)
-  - 
+  - [Project Development Cadence](#project-development-cadence)
+  - [Upcoming Content](#upcoming-content)
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
@@ -174,7 +175,7 @@ By following this deployment process, you can ensure that changes are thoroughly
     - Leverage React Hooks for state and lifecycle management.
 
 2. **File Format Exploration:**
-    - Explore and implement the use of Markdown files for content storage.
+    - ~~Explore and implement the use of Markdown files for content storage.~~
     - Learn about various file formats supported by Gatsby.
 
 3. **CMS Integration:**

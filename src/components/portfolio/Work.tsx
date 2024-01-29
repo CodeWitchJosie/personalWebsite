@@ -2,44 +2,58 @@ import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import { JsonQueryEdge } from '../../utils/graphQlUtils';
-import ReactMarkdown from 'react-markdown';
 
-enum ExpType {
-  Job = 'JOB',
-  Education = 'EDUCATION',
-}
 interface Experience {
   title: string;
-  type: ExpType;
   subtitle?: string;
-  details: string[];
+  html: string;
   date: string;
 }
 
 const Work = () => {
   const data = useStaticQuery(graphql`
     query {
-      allWorkJson {
-        edges {
-          node {
-            type
-            title
-            subtitle
-            details
-            date
+      education: allFile(filter: { relativeDirectory: { eq: "education" } }) {
+        nodes {
+          childMarkdownRemark {
+            html
+            frontmatter {
+              degree
+              institution
+              date
+            }
+          }
+        }
+      }
+      experience: allFile(filter: { relativeDirectory: { eq: "experience" } }) {
+        nodes {
+          childMarkdownRemark {
+            html
+            frontmatter {
+              role
+              employer
+              date
+            }
           }
         }
       }
     }
   `);
-  const experiences: Experience[] = data.allWorkJson.edges.map((item: JsonQueryEdge) => item.node);
-
-  const edRows = experiences.filter((item: Experience) => {
-    return item.type === ExpType.Education;
+  const edRows = data.education.nodes.map((node: any) => {
+    return {
+      title: node.childMarkdownRemark.frontmatter.degree,
+      subtitle: node.childMarkdownRemark.frontmatter.institution,
+      html: node.childMarkdownRemark.html,
+      date: node.childMarkdownRemark.frontmatter.date,
+    };
   });
-  const jobRows = experiences.filter((item: Experience) => {
-    return item.type === ExpType.Job;
+  const jobRows = data.experience.nodes.map((node: any) => {
+    return {
+      title: node.childMarkdownRemark.frontmatter.role,
+      subtitle: node.childMarkdownRemark.frontmatter.employer,
+      html: node.childMarkdownRemark.html,
+      date: node.childMarkdownRemark.frontmatter.date,
+    };
   });
 
   const renderSection = (rows: Experience[], label: string) => {
@@ -59,11 +73,7 @@ const Work = () => {
                   {item.title}
                   <div className='subtitle'>{item.subtitle}</div>
                 </p>
-                {item.details.map((bullet: string) => (
-                  <div className='details fst-italic'>
-                    <ReactMarkdown>{bullet}</ReactMarkdown>
-                  </div>
-                ))}
+                <div className='details fst-italic' dangerouslySetInnerHTML={{ __html: item.html }} />
               </div>
               <div className='col-lg-4'>
                 <h5 className='date text-uppercase'>{item.date}</h5>
