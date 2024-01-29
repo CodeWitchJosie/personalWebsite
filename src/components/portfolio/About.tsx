@@ -13,9 +13,16 @@ const About = () => {
           gatsbyImageData(quality: 100, layout: CONSTRAINED, aspectRatio: 1)
         }
       }
+      aboutMd: file(relativePath: { eq: "about.md" }) {
+        childMarkdownRemark {
+          html
+        }
+      }
     }
   `);
   const headshotFluid = getImage(data.headshot)!;
+  const aboutHtml = data.aboutMd.childMarkdownRemark.html;
+  console.log(data);
   return (
     <div id={`about`} className='dark-bg'>
       <Container>
@@ -24,31 +31,17 @@ const About = () => {
             <h5 className='text-uppercase'>About</h5>
           </div>
           <div className='col-lg-6'>
-            <p>
-              I am Jocelyn Irwin and I have been in the industry since 2007. My passion lies in solving human-centric
-              problems, from creating user-friendly interfaces to streamlining development processes to writing clean,
-              maintainable code. I thrive on fostering collaborative team cultures where work is not just a task but an
-              enjoyable experience.
-            </p>
-            <p>
-              Over the years, I've handled the full software development cycle—building rapid prototypes, transforming
-              them into production-ready software, and maintaining existing systems. I've led agile teams in fast-paced
-              environments, ensuring efficiency under tight deadlines.
-            </p>
-            <p>
-              Experienced in Lean product development and agile practices, I excel in requirements gathering and
-              translating ideas into practical software. My technical toolkit is focused in TypeScript and React, but
-              I'm very interested in exploring Vue.js. While I've explored mobile app development using NativeScript, my
-              heart remains in web development.
-            </p>
-            <p>
-              I am always eager to share my experiences and lessons learned. I'm open to technical talks within our
-              local community. If you're organizing an event, reach out with the details—let's discuss the when, where,
-              and the topic. I'm here to connect, share knowledge, and contribute to our collective growth!
-            </p>
-            <p className='headshot'>
-              <GatsbyImage image={headshotFluid} className={'rounded-circle'} alt={'TODO: alt text'} />
-            </p>
+            <div dangerouslySetInnerHTML={{ __html: aboutHtml }} />
+            <div className={'headshot'}>
+              <GatsbyImage
+                className={'rounded-circle'}
+                image={headshotFluid}
+                alt={
+                  'Professional head and shoulders shot of a woman in a maroon floral blouse, with long brown hair, looking directly at the camera'
+                }
+                backgroundColor={'#111111'}
+              />
+            </div>
           </div>
           <div className='col-lg-3'>
             <p className='download'>
